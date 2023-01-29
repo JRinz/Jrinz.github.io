@@ -7,8 +7,8 @@ Projects
     JS
 
 In-Class Assignments
-    [ICA1](https://jrinz.github.io/wa/wa1.html)
-    ICA2
+    [ICA1](ica/PDF/ICA1.pdf)
+    [ICA2](ica/PDF/ICA2.pdf)
     ICA3
     ICA4
     ICA5
@@ -24,7 +24,7 @@ In-Class Assignments
     ICA15
 
 Weekly Assignments
-    WA1
+    [WA1](https://jrinz.github.io/wa/wa1.html)
     WA2
     WA3
     WA4
