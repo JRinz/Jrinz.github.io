@@ -9,7 +9,8 @@ Projects
 In-Class Assignments
     [ICA1](ica/PDF/ICA1.pdf)
     [ICA2](ica/PDF/ICA2.pdf)
-    [ICA3](ica/ica3a.html)
+    [ICA3a](ica/ica3a.html)
+    [ICA3b] (ica3-part2)
     ICA4
     ICA5
     ICA6
