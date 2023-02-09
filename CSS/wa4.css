@@ -40,8 +40,8 @@ body {
   }
 
   .card header, .card footer {
-    padding: 3em;
-    height: 1em;
+    padding: 1em;
+    height: 3em;
   }
 
   .card header {
