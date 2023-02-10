@@ -64,4 +64,43 @@ body {
     float: right;
 }
 
+
+
+
+/*  setup of the card2 container */
+
+.card2 {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: rgb(161, 192, 147);
+  border: 0.2em solid rgb(34, 103, 74);
+  border-radius: 1.5em;
+}
+
+.card2 header, .card2 footer {
+  padding: 1em;
+  height: 3em;
+  color: rgb(22, 74, 54);
+}
+
+.card2 header {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgb(200, 223, 191));
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.card2 footer {
+  background-image: linear-gradient(to bottom,rgb(103, 143, 113), rgba(0,0,0,0.1));
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.card2 footer p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.card2 article img {
+  max-height: 100%;
+  float: right;
+}
  
