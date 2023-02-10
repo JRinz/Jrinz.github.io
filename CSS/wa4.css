@@ -66,6 +66,35 @@ body {
 
 
 
+/* General page styles second card */
+body {
+  margin: 0;
+}
+
+html-2 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 
+  
+  
+}
+
+h2, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+article {
+  height: 12em;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+article p {
+  padding: 1em;
+}
 
 /*  setup of the card2 container */
 
@@ -103,4 +132,4 @@ body {
   max-height: 100%;
   float: right;
 }
- 
+
