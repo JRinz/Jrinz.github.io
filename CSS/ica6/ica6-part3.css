@@ -1,0 +1,53 @@
+
+
+@media screen and (max-width: 600px) {
+    #narrowScreen{
+        background-color: rgb(128, 0, 126);
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    #narrowScreen{
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #wideScreen{
+        background-color: red;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    #wideScreen{
+        background-color: rgb(160, 201, 255);
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #shortScreen{
+        background-color: rgb(218, 255, 72);
+    }
+}
+
+
+@media screen and (min-height: 500px) {
+    #shortScreen{
+        background-color: turquoise;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    #tallScreen{
+        background-color: lavender;
+    }
+}
+
+
+@media screen and (min-height: 800px) {
+    #tallScreen{
+        background-color: rgb(255, 191, 73);
+    }
+}
