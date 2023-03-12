@@ -1,0 +1,50 @@
+
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  .logo {
+    font-size: 400%;
+    padding: 30px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(166, 203, 142);
+    
+  }
+
+  nav {
+    background-color: rgb(166, 203, 142);
+    padding: .7em;
+    position: sticky;
+    top: 0;
+    
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+  }
+  
+
+  nav a {
+    color: rgb(76, 106, 58);
+    text-decoration: none;
+    padding: .5em 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 170%;
+  
+  }
+
+  nav ul :hover {
+    background-color: rgb(237, 244, 215);
+    transition: 0.1;
+  }
