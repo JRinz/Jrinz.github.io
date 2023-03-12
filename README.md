@@ -2,8 +2,8 @@
 
 
 Projects
-    HTML
-    CSS
+    [HTML](Jrinz.github.io/html-midterm/page5.html)
+    [CSS](https://jrinz.github.io/projectCSS/projectCSS.html)
     JS
 
 In-Class Assignments
