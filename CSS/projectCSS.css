@@ -1,4 +1,4 @@
-
+@media screen and (max-width: 1000px) {
 body {
     background-color: #fff;
     color: #333;
@@ -92,4 +92,103 @@ body {
   img{
     width:300px;
     height:300px;
+}
+}
+
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  .logo {
+    font-size: 400%;
+    padding: 30px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(166, 203, 142);
+    
+  }
+
+  nav {
+    background-color: rgb(166, 203, 142);
+    padding: .7em;
+    position: sticky;
+    top: 0;
+    
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+  }
+  
+
+  nav a {
+    color: rgb(76, 106, 58);
+    text-decoration: none;
+    padding: .5em 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 170%;
+  
+  }
+
+  nav ul :hover {
+    background-color: rgb(237, 244, 215);
+    transition: 0.1;
+  }
+
+  .aboutme p {
+    font-size: 150%;
+    padding: 30px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgba(76, 106, 58, 0.759);
+  }
+
+  .aboutme :hover {
+    background-color: rgb(237, 244, 215);
+    transition: 0.1;
+  }
+
+  .aboutme :visited {
+    color: rgb(52, 89, 23);
+  }
+
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 1fr;
+  
+    
+  }
+
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+  
+  }
+
+  img{
+    width:300px;
+    height:300px;
+}
 }
