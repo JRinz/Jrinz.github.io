@@ -9,11 +9,11 @@ const images = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg'];
 
 /* Declaring the alternative text for each image file */
 const alts = {
-    'pic1.jpg' : 'Zoomed in on human eye',
-    'pic2.jpg' : 'Rock formation',
-    'pic3.jpg' : 'Purple flowers',
-    'pic4.jpg' : 'Eygptian drawings',
-    'pic5.jpg' : 'Moth on a leaf'
+    'pic1.jpg' : 'Orange hue pic of sun',
+    'pic2.jpg' : 'Sun about to rise',
+    'pic3.jpg' : 'JoJo looking at sunrise',
+    'pic4.jpg' : 'JoJo standing on rock',
+    'pic5.jpg' : 'JoJo walking before sunrise'
   }
 
 /* Looping through images */
