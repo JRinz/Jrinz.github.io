@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa11.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="card">
+    <header>Random Quote Generator</header>
+    <section class="quote-text-left">
+      <div class="quote" id="quote"></div>
+    </section>
+    <section class="quote-text-right">
+      <div class="author" id="author"></div>
+    </section>
+    
+   
+    <div class="buttons">
+        <a class="twitter" id="tweet" data-size="large" target="_blank" rel="noopener noreferrer">Tweet it!</a>
+        
+        <!--add an onclick event on 'next quote' button-->
+        <button class="next" onclick="getNewQuote()">Next quote</button>
+   
+    </div>
+</div>
+
+      <script src="wa11.js"></script>
+      <footer>
+      <ul>
+        <p>One added feature is seen when you hover your cursor over the 
+          quote box it creates a drop shadow. The other feature is when you click the 
+          "Tweet It!" button it takes you to Twitter to then log in and 
+          be able to tweet the quote.
+        </p>
+       
+      </ul>
+    </footer>
+</body>
+</html>
+
+

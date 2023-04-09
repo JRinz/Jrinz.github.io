@@ -37,7 +37,7 @@ Weekly Assignments
     WA8
     [WA9](https://jrinz.github.io/wa/wa9/wa9.html)
     [WA10](https://jrinz.github.io/wa/wa10/index.html)
-    WA11
+    [WA11] (https://jrinz.github.io/wa/wa11/wa11.html)
     WA12
     WA13
     WA14

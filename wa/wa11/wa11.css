@@ -1,0 +1,102 @@
+*{
+  margin:0;
+  padding:0;
+
+}
+
+body{
+  min-height:100vh;
+  background-color: rgb(155, 230, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
+}
+header {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 10px solid rgb(155, 230, 255);
+  color: rgb(155, 230, 255);
+  font-weight:bold;
+}
+.card
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 600px;
+  background-color: rgba(89, 50, 97, 0.399);
+  margin: 10px;
+  border: 0.2em solid rgb(54, 9, 75);
+  border-radius: 1.5em;
+
+}
+
+.quote
+{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(73, 38, 105);
+  padding: 30px;
+}
+.author 
+{
+  
+  margin:10px;
+  text-align: right;
+  font-size: 20px;
+  color:rgb(155, 230, 255) ;
+
+  
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9px;
+}
+.twitter
+{
+  font-size:18px;
+  cursor:pointer;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: rgb(78, 39, 114);
+  background-color: rgb(155, 230, 255);
+}
+.next
+{
+  font-size:18px;
+  cursor:pointer;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: rgb(78, 39, 114);
+  background-color: rgb(155, 230, 255);
+}
+.card:hover
+{
+  box-shadow: 10px 10px 0px rgba(75, 31, 105, 0.683);
+}
+
+ul {
+  background-color: #eeeeee03;
+  border: 5px solid;
+  border-color: rgb(78, 39, 114);
+  padding: 1em;
+  position: absolute;
+  bottom: 8mm;
+  right: 0mm;
+
+
+}
+
+ul p {
+  color: rgb(78, 39, 114);
+}
