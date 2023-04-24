@@ -56,4 +56,3 @@ for (i=0; i<comp['employees'].length; i++) {
 console.log("Problem 6");
 console.log(workFromHome);
 
-
