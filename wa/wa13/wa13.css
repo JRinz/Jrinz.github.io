@@ -1,0 +1,23 @@
+body {
+    background-color: rgba(171, 187, 192, 0.616);
+    color: rgba(68, 68, 68, 0.923);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+}
+  
+  #volume-slider {
+    height: 200px;
+    width: 205px;
+    background-color:rgba(0, 0, 0, 0.923);
+
+  }
+  
+  #plus-button,
+  #minus-button {
+    background-color: rgba(148, 0, 0, 0.923);
+    color: white;
+    border:rgba(255, 255, 255, 0.923);
+    width: 100px;
+    
+  }
+  
