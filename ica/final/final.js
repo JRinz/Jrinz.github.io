@@ -1,56 +1,99 @@
-window.onload = function() {
-    // Get all the ball elements
-    const balls = document.querySelectorAll('.ball');
-    // Count the number of balls
-    let numBalls = balls.length;
-  
-    // Add event listener to the document for mousemove event
-    document.addEventListener('mousemove', function(event) {
-      // Set the cursor to the custom cursor
-      document.body.style.cursor = 'url(whitehole.png), auto';
-  
-      // Loop through all the balls
-      balls.forEach(function(ball) {
-        // Get the bounds of the ball element
-        const rect = ball.getBoundingClientRect();
-  
-        // Check if the cursor is over the ball
-        if (event.clientX >= rect.left && event.clientX <= rect.right && 
-            event.clientY >= rect.top && event.clientY <= rect.bottom) {
-          // Hide the ball and decrease the count of balls
-          ball.style.display = 'none';
-          numBalls--;
-  
-          // Check if all the balls are gone
-          if (numBalls === 0) {
-            // Display a message to indicate that the player has won
-            const winMessage = document.createElement('h1');
-            winMessage.textContent = 'You Win!';
-            winMessage.style.textAlign = 'center';
-            document.body.appendChild(winMessage);
-          }
-        }
-      });
-    });
-  
-    // Add event listener to the balls for click event
-    balls.forEach(function(ball) {
-      ball.addEventListener('click', function(event) {
-        // Prevent the default click behavior
-        event.preventDefault();
-        // Hide the clicked ball and decrease the count of balls
-        ball.style.display = 'none';
-        numBalls--;
-  
-        // Check if all the balls are gone
-        if (numBalls === 0) {
-          // Display a message to indicate that the player has won
-          const winMessage = document.createElement('h1');
-          winMessage.textContent = 'You Win!';
-          winMessage.style.textAlign = 'center';
-          document.body.appendChild(winMessage);
-        }
-      });
-    });
-  };
-  
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const stopButton = document.getElementById("stop-button");
+const startButton = document.getElementById("start-button");
+const speedSlider = document.getElementById("speed-slider");
+let balls = [];
+
+class Ball {
+  constructor(x, y, dx, dy, radius, color) {
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.radius = radius;
+    this.color = color;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  update() {
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+      this.dx = -this.dx;
+    }
+
+    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+      this.dy = -this.dy;
+    }
+
+    this.x += this.dx * speedSlider.value;
+    this.y += this.dy * speedSlider.value;
+
+    this.draw();
+  }
+
+  stop() {
+    this.dx = 0;
+    this.dy = 0;
+  }
+
+  start() {
+    this.dx = (Math.random() - 0.5) * 10;
+    this.dy = (Math.random() - 0.5) * 10;
+  }
+}
+
+function init() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  if (balls.length === 0) {
+    for (let i = 0; i < 20; i++) {
+      const radius = Math.random() * 20 + 10;
+      const x = Math.random() * (canvas.width - radius * 2) + radius;
+      const y = Math.random() * (canvas.height - radius * 2) + radius;
+      const dx = (Math.random() - 0.5) * 10;
+      const dy = (Math.random() - 0.5) * 10;
+      const color = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
+
+      balls.push(new Ball(x, y, dx, dy, radius, color));
+    }
+  }
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  balls.forEach(ball => {
+    ball.update();
+  });
+}
+
+stopButton.addEventListener("click", () => {
+  balls.forEach(ball => {
+    ball.stop();
+  });
+});
+
+startButton.addEventListener("click", () => {
+  balls.forEach(ball => {
+    ball.start();
+  });
+});
+
+speedSlider.addEventListener("input", () => {
+  balls.forEach(ball => {
+    ball.dx = ball.dx * speedSlider.value;
+    ball.dy = ball.dy * speedSlider.value;
+  });
+});
+
+init();
+animate();
