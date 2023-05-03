@@ -1,5 +1,8 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
+
 const stopButton = document.getElementById("stop-button");
 const startButton = document.getElementById("start-button");
 const speedSlider = document.getElementById("speed-slider");
@@ -14,6 +17,7 @@ class Ball {
     this.radius = radius;
     this.color = color;
   }
+
 
   draw() {
     ctx.beginPath();
@@ -80,7 +84,9 @@ stopButton.addEventListener("click", () => {
   balls.forEach(ball => {
     ball.stop();
   });
+  speedSlider.value = 0.5; // Set speed bar to its slowest setting
 });
+
 
 startButton.addEventListener("click", () => {
   balls.forEach(ball => {
