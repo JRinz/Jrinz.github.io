@@ -3,20 +3,24 @@
   <head>
     <title>Moving Balls</title>
     <link rel="stylesheet" href="final.css">
-    
   </head>
   <body>
     <canvas id="canvas"></canvas>
-    <div id="button-container">
-      <button id="stop-button">Stop</button>
-      <button id="start-button">Start</button>
+    <div id="control-container">
+      <div id="button-container">
+        <button id="stop-button">Stop</button>
+        <button id="start-button">Start</button>
+        <button id="red-button" style="background-color: red;">Red</button>
+        <button id="green-button" style="background-color: green;">Green</button>
+        <button id="blue-button" style="background-color: blue;">Blue</button>
+      </div>
+      <div id="slider-container">
+        <label for="speed-slider">Speed: </label>
+        <input type="range" id="speed-slider" min="0.5" max="5" step="0.1" value="0.5">
+        <span id="speed-label"></span>
+      </div>
+      
     </div>
-    <div id="slider-container">
-      <label for="speed-slider">Speed: </label>
-      <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="0.5">
-
-    </div>
-
     <script src="final.js"></script>
   </body>
 </html>

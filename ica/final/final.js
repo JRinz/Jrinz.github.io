@@ -6,6 +6,10 @@ const height = canvas.height = window.innerHeight;
 const stopButton = document.getElementById("stop-button");
 const startButton = document.getElementById("start-button");
 const speedSlider = document.getElementById("speed-slider");
+const redButton = document.getElementById("red-button");
+const greenButton = document.getElementById("green-button");
+const blueButton = document.getElementById("blue-button");
+
 let balls = [];
 
 class Ball {
@@ -16,8 +20,24 @@ class Ball {
     this.dy = dy;
     this.radius = radius;
     this.color = color;
+    this.originalColor = color;
   }
 
+  hover() {
+    const ball = this; 
+    canvas.addEventListener("mousemove", (event) => {
+      const mousePositionX = event.clientX;
+      const mousePositionY = event.clientY;
+      const distance = Math.sqrt(
+        (mousePositionX - ball.x) ** 2 + (mousePositionY - ball.y) ** 2
+      );
+      if (distance < ball.radius) {
+        ball.color = "white";
+      } else {
+        ball.color = ball.originalColor;
+      }
+    });
+  }
 
   draw() {
     ctx.beginPath();
@@ -36,8 +56,8 @@ class Ball {
       this.dy = -this.dy;
     }
 
-    this.x += this.dx * speedSlider.value;
-    this.y += this.dy * speedSlider.value;
+    this.x += this.dx * (speedSlider.value / speedSlider.max);
+    this.y += this.dy * (speedSlider.value / speedSlider.max);
 
     this.draw();
   }
@@ -62,11 +82,13 @@ function init() {
       const radius = Math.random() * 20 + 10;
       const x = Math.random() * (canvas.width - radius * 2) + radius;
       const y = Math.random() * (canvas.height - radius * 2) + radius;
-      const dx = (Math.random() - 0.5) * 10;
-      const dy = (Math.random() - 0.5) * 10;
+      const dx = (Math.random() - 0.5) * 20;
+      const dy = (Math.random() - 0.5) * 20;
       const color = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
 
-      balls.push(new Ball(x, y, dx, dy, radius, color));
+      const ball = new Ball(x, y, dx, dy, radius, color);
+      ball.hover();
+      balls.push(ball);
     }
   }
 }
@@ -80,11 +102,12 @@ function animate() {
   });
 }
 
+
 stopButton.addEventListener("click", () => {
   balls.forEach(ball => {
     ball.stop();
   });
-  speedSlider.value = 0.5; // Set speed bar to its slowest setting
+  speedSlider.value = speedSlider.min; 
 });
 
 
@@ -95,11 +118,21 @@ startButton.addEventListener("click", () => {
 });
 
 speedSlider.addEventListener("input", () => {
-  balls.forEach(ball => {
-    ball.dx = ball.dx * speedSlider.value;
-    ball.dy = ball.dy * speedSlider.value;
-  });
+  speedLabel.textContent = speedSlider.value;
 });
+
+redButton.addEventListener("click", () => {
+  document.body.style.backgroundColor = "red";
+});
+
+greenButton.addEventListener("click", () => {
+  document.body.style.backgroundColor = "green";
+});
+
+blueButton.addEventListener("click", () => {
+  document.body.style.backgroundColor = "blue";
+});
+
 
 init();
 animate();
